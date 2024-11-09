@@ -1,0 +1,106 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e2a47;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: #e1e9f1;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    width: 90%;
+    padding: 20px;
+    background-color: #24355a;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Buttons */
+  button, a.btn {
+    background-color: #4db8ff;
+    padding: 10px 20px; /* Smaller padding */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* Smaller font size */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover, a.btn:hover {
+    background-color: #3a8cbb;
+  }
+  
+  /* Timer */
+  .timer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    background-color: #2a6b8f;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #f4f4f4;
+  }
+  
+  /* Choice Container */
+  .choice-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #2a6b8f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .choice-container:hover {
+    background-color: #4db8ff;
+  }
+  
+  .choice-prefix {
+    margin-right: 15px;
+    font-weight: bold;
+    color:white;
+  }
+  
+  .choice-text {
+    color: white;
+  }
+  
+  .choice-container.selected {
+    background-color: black;
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: black;
+  }
+  

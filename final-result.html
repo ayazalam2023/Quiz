@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Result</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Final Quiz Results</h1>
+        <h2>Total Marks: <span id="score">0</span>/20</h2>
+        <h3 id="remarks">Loading...</h3>
+
+        <!-- Button to return to the homepage or retry -->
+        <button onclick="goHome()">Go to Homepage</button>
+    </div>
+
+    <script>
+        // Retrieve the score from localStorage
+        const score = localStorage.getItem("score") || 0;
+
+        // Display the score
+        document.getElementById("score").textContent = score;
+
+        // Generate remarks based on score
+        let remarks = '';
+        if (score > 15) {
+            remarks = "Excellent performance! You're a quiz master!";
+        } else if (score > 10) {
+            remarks = "Good job! You are above average.";
+        } else if (score >= 8) {
+            remarks = "Better luck next time. You can improve!";
+        } else {
+            remarks = "Don't give up! Try again and do better!";
+        }
+
+        // Display the remarks
+        document.getElementById("remarks").textContent = remarks;
+
+        // Function to redirect the user to the homepage (game)
+        function goHome() {
+            window.location.href = "game.html";
+        }
+
+        // Function to view high scores
+        function viewHighScores() {
+            window.location.href = "highscores.html"; // Redirect to high scores page
+        }
+    </script>
+</body>
+</html>
