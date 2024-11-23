@@ -5,26 +5,26 @@ let timer; // Declare a variable to store the countdown interval
 let timeLeft = 20 * 60; // 20 minutes in seconds
 
 const questions = [
-    { question: "What does HTML stand for?", options: ["Hyperlinks and Text Markup Language", "Hyper Text Markup Language", "Home Tool Markup Language", "Hyperlink Tool Markup Language"], correctAnswer: 2 },
-    { question: "Which of the following is used to define styles for a webpage?", options: ["HTML", "CSS", "JavaScript", "PHP"], correctAnswer: 2 },
-    { question: "What does CSS stand for?", options: ["Computer Style Sheets", "Cascading Style Sheets", "Creative Style Sheets", "Colorful Style Sheets"], correctAnswer: 2 },
-    { question: "Which HTML tag is used to display images?", options: ["<img>", "<image>", "<src>", "<pic>"], correctAnswer: 1 },
-    { question: "Which tag is used to create a hyperlink?", options: ["<link>", "<a>", "<href>", "<url>"], correctAnswer: 2 },
-    { question: "Which attribute is used to define the background color in HTML?", options: ["color", "background-color", "bgcolor", "bgcolorcolor"], correctAnswer: 2 },
-    { question: "Which programming language is primarily used for web development?", options: ["Python", "JavaScript", "C", "C#"], correctAnswer: 2 },
-    { question: "Which tag is used to define an ordered list in HTML?", options: ["<ol>", "<ul>", "<li>", "<dl>"], correctAnswer: 1 },
-    { question: "Which of the following is a server-side scripting language?", options: ["JavaScript", "PHP", "CSS", "HTML"], correctAnswer: 2 },
-    { question: "Which HTML element is used to specify a footer for a document?", options: ["<footer>", "<bottom>", "<end>", "<foot>"], correctAnswer: 1 },
-    { question: "What does DOM stand for?", options: ["Document Object Model", "Digital Ordinance Model", "Document Oriented Model", "Display Object Management"], correctAnswer: 1 },
-    { question: "Which is used to make text bold in HTML?", options: ["<bold>", "<b>", "<strong>", "<text>"], correctAnswer: 2 },
-    { question: "What does JSON stand for?", options: ["JavaScript Object Notation", "JavaScript Online Network", "Java System Object Notation", "Java String Object Notation"], correctAnswer: 1 },
-    { question: "Which is the correct syntax for a JavaScript function?", options: ["function = myFunction()", "function myFunction()", "myFunction = function()", "myFunction function()"], correctAnswer: 2 },
-    { question: "How do you add a comment in HTML?", options: ["<!-- Comment -->", "// Comment", "# Comment", "/* Comment */"], correctAnswer: 1 },
-    { question: "What does SQL stand for?", options: ["Structured Query Language", "Stylish Query Language", "Simple Query Language", "Statement Query Language"], correctAnswer: 1 },
-    { question: "What does API stand for?", options: ["Application Programming Interface", "Application Personal Interface", "Application Public Interface", "Application Prototype Interface"], correctAnswer: 1 },
-    { question: "Which CSS property controls the text size?", options: ["font-style", "text-size", "font-size", "text-style"], correctAnswer: 3 },
-    { question: "What does XML stand for?", options: ["eXtensible Markup Language", "eXtra Modern Language", "eXtra Multi Language", "eXamine Multiple Language"], correctAnswer: 1 },
-    { question: "Which HTML tag is used for the largest heading?", options: ["<heading>", "<h6>", "<h1>", "<header>"], correctAnswer: 3 }
+    { question: "What does HTML stand for?", options: ["Hyperlinks and Text Markup Language", "Hyper Text Markup Language", "Home Tool Markup Language", "Hyperlink Tool Markup Language"], correctAnswer: 1 },
+    { question: "Which of the following is used to define styles for a webpage?", options: ["HTML", "CSS", "JavaScript", "PHP"], correctAnswer: 1 },
+    { question: "What does CSS stand for?", options: ["Computer Style Sheets", "Cascading Style Sheets", "Creative Style Sheets", "Colorful Style Sheets"], correctAnswer: 1 },
+    { question: "Which HTML tag is used to display images?", options: ["<img>", "<image>", "<src>", "<pic>"], correctAnswer: 0 },
+    { question: "Which tag is used to create a hyperlink?", options: ["<link>", "<a>", "<href>", "<url>"], correctAnswer: 1 },
+    { question: "Which attribute is used to define the background color in HTML?", options: ["color", "background-color", "bgcolor", "bgcolorcolor"], correctAnswer: 1 },
+    { question: "Which programming language is primarily used for web development?", options: ["Python", "JavaScript", "C", "C#"], correctAnswer: 1 },
+    { question: "Which tag is used to define an ordered list in HTML?", options: ["<ol>", "<ul>", "<li>", "<dl>"], correctAnswer: 0 },
+    { question: "Which of the following is a server-side scripting language?", options: ["JavaScript", "PHP", "CSS", "HTML"], correctAnswer: 1 },
+    { question: "Which HTML element is used to specify a footer for a document?", options: ["<footer>", "<bottom>", "<end>", "<foot>"], correctAnswer: 0 },
+    { question: "What does DOM stand for?", options: ["Document Object Model", "Digital Ordinance Model", "Document Oriented Model", "Display Object Management"], correctAnswer: 0 },
+    { question: "Which is used to make text bold in HTML?", options: ["<bold>", "<b>", "<strong>", "<text>"], correctAnswer: 1 },
+    { question: "What does JSON stand for?", options: ["JavaScript Object Notation", "JavaScript Online Network", "Java System Object Notation", "Java String Object Notation"], correctAnswer: 0 },
+    { question: "Which is the correct syntax for a JavaScript function?", options: ["function = myFunction()", "function myFunction()", "myFunction = function()", "myFunction function()"], correctAnswer: 1 },
+    { question: "How do you add a comment in HTML?", options: ["<!-- Comment -->", "// Comment", "# Comment", "/* Comment */"], correctAnswer: 0 },
+    { question: "What does SQL stand for?", options: ["Structured Query Language", "Stylish Query Language", "Simple Query Language", "Statement Query Language"], correctAnswer: 0 },
+    { question: "What does API stand for?", options: ["Application Programming Interface", "Application Personal Interface", "Application Public Interface", "Application Prototype Interface"], correctAnswer: 0 },
+    { question: "Which CSS property controls the text size?", options: ["font-style", "text-size", "font-size", "text-style"], correctAnswer: 2 },
+    { question: "What does XML stand for?", options: ["eXtensible Markup Language", "eXtra Modern Language", "eXtra Multi Language", "eXamine Multiple Language"], correctAnswer: 0 },
+    { question: "Which HTML tag is used for the largest heading?", options: ["<heading>", "<h6>", "<h1>", "<header>"], correctAnswer: 2 }
 ];
 
 function loadQuestion() {
